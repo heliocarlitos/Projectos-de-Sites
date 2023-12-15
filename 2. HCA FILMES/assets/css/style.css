@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cor-branca: #fff;
+    --cor-branca-a: #e0e0e0;
+    --cor-amarela: #e5ff00;
+    --cor-preta: #000;
+    --cor-preta-transparent-a: rgba(0, 0, 0, 0.729);
+    --cor-verde: #04ff00;
+    --cor-verde-a: #04db00;
+    --cor-verde-transparent: #04ff006c;
+
+    --fundo-do-header: #2d2d2d;
+    --fundo-do-site: #1e1e1e;
+    --fundo-do-tt-filmes: #0000009d;
+}
+
+body {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    background-color: var(--fundo-do-site);
+}
+.header {
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.header-img{
+    background-image: url(/assets/image/fundo-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 99999999 !important;
+    overflow: hidden !important;
+}
+.header .logoLinksBtn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: .8s;
+}
+.logoLinksBtn.bgHeader{
+    background-color: var(--fundo-do-header);
+}
+.header .logoLinksBtn .logo a{
+    font-size: .8em;
+    color: var(--cor-branca);
+    text-decoration: none;
+}
+.header .logoLinksBtn .logo a span{
+    color: var(--cor-verde);
+}
+.header .logoLinksBtn .links ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.header .logoLinksBtn .links ul li a{
+    text-decoration: none;
+    color: var(--cor-branca);
+    font-size: 1em;
+    transition: .2s;
+
+    &:hover{
+        opacity: 80%;
+    }
+}
+.header .logoLinksBtn .btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header .logoLinksBtn .btn .entrar a{
+    color: var(--cor-verde);
+    text-decoration: none;
+    &:hover{
+        opacity: 80%;
+    }
+}
+.header .logoLinksBtn .btn .seInscrever a{
+    color: var(--cor-branca);
+    background-color: var(--cor-verde-a);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 3px;
+    transition: .2s;
+
+    &:hover{
+        background-color: var(--cor-verde);
+    }
+}
+.header .logoLinksBtn .btn .logoMenu span{
+    display: none;
+    color: var(--cor-branca);
+    font-size: 1.6em;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover{
+        color: var(--cor-verde);
+    }
+}
+.header .menuMobile{
+    background-color: var(--fundo-do-header);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    padding-top: 60px;
+    animation: submenudescendo .2s;
+    position: fixed;
+    display: none;
+    top: 0;
+    z-index: 999;
+}
+.header .menuMobile .logofecharMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: -63px;
+    padding: 10px;
+}
+.header .menuMobile .logofecharMenu .logo a{
+    font-size: .8em;
+    color: var(--cor-branca);
+    text-decoration: none;
+}
+.header .menuMobile .logofecharMenu .logo a span{
+    color: var(--cor-verde);
+}
+.header .menuMobile .fecharMenu span{
+    color: var(--cor-branca);
+    font-size: 2em;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover{
+        color: var(--cor-verde);
+    }
+}
+.header .menuMobile nav ul li{
+    list-style: none;
+    margin: 10px;
+
+}
+.header .menuMobile nav ul li a{
+    text-decoration: none;
+    color: var(--cor-branca);
+    transition: .2s;
+
+    &:hover{
+        opacity: 60%;
+    }
+}
+.header .menuMobile .btn{
+    display: none;
+    text-align: center;
+}
+.header .menuMobile .btn .entrar{
+    margin-bottom: 20px;
+}
+.header .menuMobile .btn .entrar a{
+    color: var(--cor-verde);
+    text-decoration: none;
+    &:hover{
+        opacity: 80%;
+    }
+}
+.header .menuMobile .btn .seInscrever a{
+    color: var(--cor-branca);
+    background-color: var(--cor-verde);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .2s;
+
+    &:hover{
+        box-shadow: 0 0 15px var(--cor-verde);
+    }
+}
+
+.introducao{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+.introducao .destaques .fimeEmDestaque .capaDestaque {
+    max-width: 550px;
+    min-width: 50px;  
+    margin: 0px 0 0 0;
+}
+.introducao .destaques .fimeEmDestaque .capaDestaque img{
+    width: 100%;
+    border-radius: 10px;
+}
+.introducao .apresentacao {
+    width: 100%;
+    max-width: 600px;
+}
+.introducao .apresentacao h1 {
+    color: var(--cor-branca);
+}
+.introducao .apresentacao h1 span{
+    color: var(--cor-verde);
+}
+.introducao .apresentacao .descricao{
+    margin: 10px 0;
+}
+.introducao .apresentacao .descricao p {
+    color: var(--cor-branca);
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+.introducao .apresentacao .btn{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+.introducao .apresentacao .btn .ass a{
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-size: 1.3em;
+    background-color: var(--cor-verde);
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: .2s;
+
+    &:hover{
+        &:hover{
+            box-shadow: 0 0 15px var(--cor-verde);
+            background-color: var(--cor-verde);
+        }
+    }
+    
+}
+.introducao .apresentacao .btn .SI a{
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-size: 1.3em;
+    border: 2px solid var(--cor-verde);
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: .2s;
+
+    &:hover{
+        background-color: var(--cor-verde-transparent);
+        border: 2px solid transparent;
+
+    }
+}
+
+/* ========= PERSONALIZAÇÃO DO MAIN ========= */
+
+.main{
+    width: 100%;
+    margin-top: 5px;
+    padding: 20px;
+}
+.main .seccaoDeAno{
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--cor-verde);
+    margin-bottom: 20px;
+}
+.main .seccaoDeAno .ano{
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--cor-preta);
+    transition: .3s;
+    padding: 10px 10px;
+
+    &:hover{
+        opacity: 70%;
+    }
+}
+.main .seccaoDeAno .visivel {
+    background-color: var(--cor-verde-a);
+}
+.sessaoDeFilmes {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.sessaoDeFilmes .filmes {
+    margin: 10px;
+    overflow: hidden;
+}
+.sessaoDeFilmes .filmes .cardDeFilmes{
+    width: 100%;
+    max-width: 270px;
+    text-decoration: none;
+}
+.sessaoDeFilmes .filmes .cardDeFilmes img{
+    width: 100%;
+    height: 100%;
+    max-height: 130px;
+    max-width: 270px;
+    transition: .3s;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+.sessaoDeFilmes .filmes .cardDeFilmes h3{
+    width: 100%;
+    max-width: 270px;
+    color: var(--cor-branca);
+
+    &:hover{
+        color: var(--cor-verde);
+    }
+}
+.sessaoDeFilmes .filmes .cardDeFilmes p{
+    width: 100%;
+    max-width: 270px;
+    color: var(--cor-branca-a);
+    cursor: text;
+}
+#ano2024,#ano2025,#ano2026{
+    display: none;
+}
+
+.notificacao-defilme-ausente{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--cor-preta-transparent-a);
+    backdrop-filter: blur(4px);
+    color: var(--cor-preta);
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 99999999999999;
+    cursor: not-allowed;
+}
+.notificacao-defilme-ausente .notific {
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--cor-branca);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: default;
+    margin: 20px;
+}
+.notificacao-defilme-ausente .notific p{
+    text-align: justify;
+    margin: 10px 0;
+    cursor: text;
+}
+.notificacao-defilme-ausente .notific .btn4 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.notificacao-defilme-ausente .notific button{
+    border: 0;
+    background-color: var(--cor-preta);
+    color: var(--cor-branca);
+    padding: 5px;
+    border-radius: 3px;
+
+    &:hover{
+        background-color: var(--fundo-do-site);
+        cursor: pointer;
+    }
+}
+@keyframes submenudescendo {
+    0%{
+        margin-top: -50px;
+    }
+}
+@keyframes animacaoParaImagens {
+    from{
+        opacity: 0;
+        clip-path: inset(45% 20% 45% 20%);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0% 0% 0% 0%);
+    }
+}
+@media screen and (max-width: 1189px) {
+    .introducao .destaques {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 790px){
+    .header .logoLinksBtn{
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .header .logoLinksBtn .btn .logoMenu span{
+        display: block ;
+    }
+    .header .logoLinksBtn .links{
+        display: none;
+    }
+    .introducao{
+    }
+}
+@media screen and (max-width: 360px){
+    .header .logoLinksBtn .btn .entrar,
+    .header .logoLinksBtn .btn .seInscrever{
+        display: none;
+    }
+    .header .menuMobile .btn{
+        display: block;
+    }
+    .introducao .apresentacao h1 {
+        font-size: 1.5em;
+    }
+    .introducao .apresentacao .btn{
+        justify-content: center;
+    }
+    .introducao .apresentacao .btn div {
+        margin-bottom: 20px;
+    }
+    .introducao .apresentacao .btn .ass a,
+    .introducao .apresentacao .btn .SI a{
+        font-size: 1em;
+        padding: 5px 10px;
+        
+    }
+    .sessaoDeFilmes .filmes .cardDeFilmes h3{
+        font-size: 1em;
+    }
+    .sessaoDeFilmes .filmes .cardDeFilmes p{
+        font-size: .9em;
+    }
+    
+}

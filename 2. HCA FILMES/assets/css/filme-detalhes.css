@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url(style.css);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cor-branca: #fff;
+    --cor-branca-a: #e0e0e0;
+    --cor-branca-b: #c7c7c7;
+    --cor-amarela: #e5ff00;
+    --cor-preta: #000;
+    --cor-verde: #04ff00;
+    --cor-verde-a: #04db00;
+    --cor-verde-a: #0f930c;
+    --cor-verde-transparent: #04ff006c;
+
+    --fundo-do-header: #2d2d2d;
+    --fundo-do-site: #1e1e1e;
+    --fundo-do-tt-filmes: #0000009d;
+}
+.logoLinksBtn.bgHeader2{
+    background-color: var(--fundo-do-header);
+}
+.apresentacaoDoFilme{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--fundo-do-header);
+    color: var(--cor-branca); 
+    padding: 0 20px;
+    width: 100%;
+    max-width: 730px;
+    margin: 0 auto;
+    margin-top: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: -199999999999999 !important;
+}
+.apresentacaoDoFilme .iframe-container {
+    padding-bottom: 56.25%; 
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 60px #3498db;
+    animation: mudarCor 30s infinite alternate;
+    z-index: 0;
+}
+.apresentacaoDoFilme .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+.apresentacaoDoFilme .detalhesDoFilme { 
+    width: 100%;
+    max-width: 700px;
+    margin-top: 10px;
+}
+.apresentacaoDoFilme .detalhesDoFilme .tituloDoFilme {
+    text-align: left;
+}
+.apresentacaoDoFilme .detalhesDoFilme .config {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.apresentacaoDoFilme .detalhesDoFilme .tts {
+    text-align: left;
+    font-size: 1.2em;
+    position: relative;
+}
+.apresentacaoDoFilme .detalhesDoFilme .tts::after{
+    content: '';
+    position: absolute;
+    height: 0.5px;
+    width: 20px;
+    background-color: var(--cor-verde);
+    margin-left: 65px;
+    transform: translateY(-5px);
+}
+.apresentacaoDoFilme .detalhesDoFilme .config .categoria {
+    text-align: left;
+    margin: 20px 0 20px 0;
+}
+.apresentacaoDoFilme .detalhesDoFilme .categoria a {
+    text-decoration: none;
+    color: var(--cor-verde);
+    padding: 5px;
+    border: 1px solid var(--cor-verde);
+    
+    &:hover{
+        background-color: var(--cor-verde);
+        color: var(--cor-preta);
+        box-shadow: 0 0 10px var(--cor-verde);
+    }
+}
+.apresentacaoDoFilme .detalhesDoFilme .config .cine-mood{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.apresentacaoDoFilme .detalhesDoFilme .config .cine-mood label,
+.apresentacaoDoFilme .detalhesDoFilme .config .cine-mood input{
+    cursor: pointer;
+}
+.apresentacaoDoFilme .detalhesDoFilme .sinaps {
+    margin: 5px 0;
+    text-align: justify;
+    color: var(--cor-branca-b);
+}
+.apresentacaoDoFilme .detalhesDoFilme .botoes {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    gap: 20px;
+}
+.apresentacaoDoFilme .detalhesDoFilme .botoes a {
+    color: var(--cor-verde);
+    text-decoration: none;
+    font-size: 1em;
+    border: 1px solid var(--cor-verde);
+    padding: 10px;
+    border-radius: 50px;
+
+    &:hover{
+        background-color: var(--cor-verde);
+        color: var(--cor-preta);
+        box-shadow: 0 0 10px var(--cor-verde);
+    }
+}
+.apresentacaoDoFilme .detalhesDoFilme .botoes .verf {
+    background-color: var(--cor-verde);
+    color: var(--cor-preta);
+}.seccaoelenco {
+    border-top: 1px solid var(--cor-verde);
+}
+.seccaoelenco .tt{
+    display: flex;
+    justify-content: left;
+    margin: 10px 0;
+    font-size: 1.3em;
+}
+.osElenco {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.osElenco .elenco {
+    transition: .2s;
+
+    &:hover{
+        transform: translateY(-10px);
+        color: var(--cor-verde);
+    }
+}
+.osElenco .elenco img{
+    width: 140px;
+    height: 220px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+@keyframes mudarCor {
+    0% {
+        box-shadow: 0px 0px 60px #3498db;
+    }
+    10% {
+        box-shadow: 0px 0px 60px #e74c3c;
+    }
+    20% {
+        box-shadow: 0px 0px 60px #2ecc71;
+    }
+    30% {
+        box-shadow: 0px 0px 60px #f39c12;
+    }
+    40% {
+        box-shadow: 0px 0px 60px #9b59b6;
+    }
+    50% {
+        box-shadow: 0px 0px 60px #1abc9c;
+    }
+    60% {
+        box-shadow: 0px 0px 60px #e67e22;
+    }
+    70% {
+        box-shadow: 0px 0px 60px #34495e;
+    }
+    80% {
+        box-shadow: 0px 0px 60px #d35400;
+    }
+    90% {
+        box-shadow: 0px 0px 60px #95a5a6;
+    }
+    100% {
+        box-shadow: 0px 0px 60px #3498db;
+    }
+}
+@keyframes submenudescendo {
+    0%{
+        margin-top: -50px;
+    }
+}
+@keyframes animacaoParaImagens {
+    from{
+        opacity: 0;
+        clip-path: inset(45% 20% 45% 20%);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0% 0% 0% 0%);
+    }
+}
+@media screen and (max-width: 1189px) {
+    .introducao .destaques {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 790px){
+    .header .logoLinksBtn{
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .header .logoLinksBtn .btn .logoMenu span{
+        display: block ;
+    }
+    .header .logoLinksBtn .links{
+        display: none;
+    }
+    .introducao{
+    }
+}
+@media screen and (max-width: 360px){
+    .header .logoLinksBtn .btn .entrar,
+    .header .logoLinksBtn .btn .seInscrever{
+        display: none;
+    }
+    .header .menuMobile .btn{
+        display: block;
+    }
+    .introducao .apresentacao h1 {
+        font-size: 1.5em;
+    }
+    .introducao .apresentacao .btn{
+        justify-content: center;
+    }
+    .introducao .apresentacao .btn div {
+        margin-bottom: 20px;
+    }
+    .introducao .apresentacao .btn .ass a,
+    .introducao .apresentacao .btn .SI a{
+        font-size: 1em;
+        padding: 5px 10px;
+        
+    }
+    .sessaoDeFilmes .filmes .cardDeFilmes h3{
+        font-size: 1em;
+    }
+    .sessaoDeFilmes .filmes .cardDeFilmes p{
+        font-size: .9em;
+    }
+    .apresentacaoDoFilme .detalhesDoFilme .botoes {
+        justify-content: center;
+    }
+    
+}
+@media screen and (max-width: 313px) {
+    .apresentacaoDoFilme .detalhesDoFilme .botoes .btnb {
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 263px) {
+.apresentacaoDoFilme .detalhesDoFilme .categoria a {
+    margin: 0 0 100px 0;
+}
+}
+
+
+
+
