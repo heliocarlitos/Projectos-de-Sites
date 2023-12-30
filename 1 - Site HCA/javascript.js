@@ -112,3 +112,11 @@ if(localStorage.SalvarCookies == 'Cookies-Salvo'){
 else{
     sscaoCookies.classList.add('mostrar')
 }
+
+function updateYearOnFooter() {
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    document.getElementById('footer-current-year').innerHTML = currentYear    
+}
+
+updateYearOnFooter()
