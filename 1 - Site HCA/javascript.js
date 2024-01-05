@@ -113,10 +113,18 @@ else{
     sscaoCookies.classList.add('mostrar')
 }
 
-// JS PARA ACTUALIZAR A O ANO DO RODAPÉ
+// JS PARA ATUALIZAR O ANO DO RODAPÉ
 function updateYearOnFooter() {
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
-    document.getElementById('footer-current-year').innerHTML = currentYear    
+    
+    // Obtém o elemento com o ID 'footer-current-year'
+    const yearElement = document.getElementById('footer-current-year');
+    
+    // Verifica se o ano já foi adicionado anteriormente
+    if (!yearElement.textContent.includes(currentYear)) {
+        // Adiciona o ano atual antes do "H" apenas se ainda não estiver presente
+        yearElement.innerHTML = `${currentYear} ${yearElement.innerHTML}`;
+    }
 }
-updateYearOnFooter()
+updateYearOnFooter();
